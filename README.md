@@ -11,8 +11,8 @@ Reward = +1 for each time step the pole remains upright.
 
 ### Episode ends if:
 
-Pole angle > ±12°
-Cart position > ±2.4 units
+Pole angle > ±12°\
+Cart position > ±2.4 units\
 Objective: Maximize total reward by learning an optimal policy that keeps the pole balanced for as long as possible.
 
 ## MONTE CARLO CONTROL ALGORITHM FOR CART POLE BALANCING
@@ -20,17 +20,17 @@ The Monte Carlo (MC) control algorithm estimates the optimal action-value functi
 Steps Involved
 ## Initialize
 
-Q(s, a) arbitrarily (e.g., zeros)
-π(s): ε-greedy policy w.r.t. Q(s, a)
+Q(s, a) arbitrarily (e.g., zeros)\
+π(s): ε-greedy policy w.r.t. Q(s, a)\
 For each episode
 
-Generate an episode: sequence of (state, action, reward)
-Compute returns G_t for each (s, a)
+Generate an episode: sequence of (state, action, reward)\
+Compute returns G_t for each (s, a)\
 Update Q-values [ Q(s,a) = Q(s,a) + \alpha [G_t - Q(s,a)] ]
 
 ## Policy Improvement
 
-Make π(s) greedy w.r.t. updated Q(s, a)
+Make π(s) greedy w.r.t. updated Q(s, a)\
 Repeat until convergence.
 
 ### MONTE CARLO CONTROL FUNCTION
